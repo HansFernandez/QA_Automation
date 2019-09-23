@@ -1,0 +1,33 @@
+from selenium import webdriver
+chrome_path = r"C:\Python\Python37-32\chromedriver.exe"
+driver = webdriver.Chrome(chrome_path)
+driver.get('http://p2c.warnerrobinsga.gov/contact.aspx')
+
+#ID all forms
+id0_box = driver.find_element_by_id('mainContent_CenterColumnContent_firstname')
+id1_box = driver.find_element_by_id('mainContent_CenterColumnContent_middlename')
+id2_box = driver.find_element_by_id('mainContent_CenterColumnContent_lastname')
+id3_box = driver.find_element_by_id('mainContent_CenterColumnContent_email')
+id4_box = driver.find_element_by_id('mainContent_CenterColumnContent_address1')
+id5_box = driver.find_element_by_id('mainContent_CenterColumnContent_city')
+id6_box = driver.find_element_by_id('mainContent_CenterColumnContent_state')
+id7_box = driver.find_element_by_id('mainContent_CenterColumnContent_zip')
+id8_box = driver.find_element_by_id('mainContent_CenterColumnContent_homephone')
+id9_box = driver.find_element_by_id('mainContent_CenterColumnContent_workphone')
+id10_box = driver.find_element_by_id('mainContent_CenterColumnContent_mobilephone')
+id11_box = driver.find_element_by_id('mainContent_CenterColumnContent_message')
+
+#Fill in dummy data
+id0_box.send_keys('Central')
+id1_box.send_keys('Square')
+id2_box.send_keys('Support')
+id3_box.send_keys('Support@centralsquare.com')
+id4_box.send_keys('Watson Blvd')
+id5_box.send_keys('Warner Robins')
+id6_box.send_keys('GA')
+id7_box.send_keys('31093')
+id8_box.send_keys('4783025378')
+id9_box.send_keys('8886637877')
+id10_box.send_keys('8886637877')
+id11_box.send_keys('This is a test of the Contact us to confirm it is working as desired')
+
